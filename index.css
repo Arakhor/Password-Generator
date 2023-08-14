@@ -1,0 +1,125 @@
+body {
+    margin: 0;
+}
+
+/* utility classes */
+
+.flex {
+    display: flex;
+}
+
+/* generator color palette */
+
+#generator {
+    --color-accent-lighter: #EDE9FE;
+    --color-accent-light: #C4B5FD;
+    --color-accent: #6D28D9;
+    --color-accent-dark: #501ea2;
+    --color-accent-darker: #3a1570;
+}
+
+@media (prefers-color-scheme: light) {
+    #generator {
+        --color-bg: #F5F3FF;
+        --color-main: black;
+        --color-medium: #6B7280;
+        --color-separator: #D5D4D8;
+    }
+
+}
+
+@media (prefers-color-scheme: dark) {
+    #generator {
+        --color-bg: #1F2937;
+        --color-main: white;
+        --color-medium: #D5D4D8;
+        --color-separator: #6B7280;
+    }
+}
+
+#generator, #generator * {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+#generator {
+    position: relative;
+    font-family: 'Inter', sans-serif;
+    flex-flow: column nowrap;
+    justify-content: center;
+    height: 34.4rem;
+    width: 34.4rem;
+    padding: 0 3.5rem;
+    background-color: var(--color-bg);
+}
+
+#generator__header {
+    font-family: 'Karla', sans-serif;
+    font-size: 2.5rem;
+    color: var(--color-main);
+}
+
+#generator__header span {
+    color: var(--color-accent);
+}
+
+#generator__text {
+    margin: .6rem 0 3.2rem;
+    font-size: 1.25rem;
+    color: var(--color-medium);
+}
+
+#generator__btn {
+    width: fit-content;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    background-color: var(--color-accent);
+    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
+    padding: .5rem 1rem;
+}
+
+#generator__btn:hover {
+    background-color: var(--color-accent-dark);
+}
+
+#generator__btn:active {
+    background-color: var(--color-accent-darker);
+}
+
+#generator__separator {
+    width: 100%;
+    border-bottom: 1px solid var(--color-separator);
+    margin: 2.2rem 0;
+}
+
+#generator__container {
+    justify-content: space-between;
+}
+
+.generator__output {
+    color: var(--color-accent-light);
+    background-color: #273549;
+    border-radius: 6px;
+    width: 13rem;
+    height: 2.4rem;
+    font-weight: 500;
+    align-items: center;
+    justify-content: center;
+}
+
+.generator__output:hover {
+    color: var(--color-accent-lighter);
+}
+
+.generator__output:active {
+    color: white;
+}
+
+#notification {
+    display: none;
+    position: absolute;
+    align-self: center;
+    bottom: 10%;
+    color: var(--color-medium);
+}
